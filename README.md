@@ -2,6 +2,8 @@
 
 An example application that demonstrates the use of OpenAPI for documenting API endpoints.
 
+You can view the documentation at [/docs/api](http://localhost:8080/docs/api) when the container is running.
+
 ## Running the app locally
 
 You need [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
