@@ -24,13 +24,19 @@ You need [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](http
     docker compose run --rm app composer install
     ```
 
-4. **Start the app** (runs Laravel’s dev server inside the container):
+4. **Prepare Local Data**
+
+    ```bash
+    docker compose run --rm app composer setup
+    ```
+
+5. **Start the app** (runs Laravel’s dev server inside the container):
 
    ```bash
    docker compose up
    ```
 
-5. Open **http://localhost:8080** in your browser. The container maps host port `8080` to the dev server on port `8000`.
+6. Open **http://localhost:8080** in your browser. The container maps host port `8080` to the dev server on port `8000`.
 
 To run in the background:
 
@@ -39,6 +45,14 @@ docker compose up -d
 ```
 
 Stop the stack with `Ctrl+C` in the foreground terminal, or with `docker compose down` if you used `-d`.
+
+### API Credentials
+
+Use the `app:testing-token` artisan command to retrieve an API token you can use for demonstration purposes.
+
+```bash
+docker compose run --rm app php artisan api:test-token
+```
 
 ### Composer and Artisan in the container
 
